@@ -40,6 +40,10 @@
   version "1.0.20"
   resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-1.0.20.tgz#bac97c9709a3130241da4c2c85710e1dc8775b1c"
 
+profilex-app-router@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/profilex-app-router/-/profilex-app-router-1.0.0.tgz#4314fffd17de5173d579cd6939b07a2e05efec14"
+
 profilex-common-css@^1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/profilex-common-css/-/profilex-common-css-1.0.7.tgz#2bedd5825c663613a97664c0c57c633af9fec2c4"

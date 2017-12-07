@@ -14,13 +14,13 @@ profilex-app-router@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/profilex-app-router/-/profilex-app-router-1.0.1.tgz#6fb4612d91fc995b6f3f884791c75d45b53871d8"
 
-profilex-common-css@1.0.11, profilex-common-css@^1.0.10, profilex-common-css@^1.0.11, profilex-common-css@^1.0.7, profilex-common-css@^1.0.9:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/profilex-common-css/-/profilex-common-css-1.0.11.tgz#17f53ca33d2d2409eb26eb34d6438d5447e47f38"
+profilex-common-css@^1.0.10, profilex-common-css@^1.0.13, profilex-common-css@^1.0.7, profilex-common-css@^1.0.9:
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/profilex-common-css/-/profilex-common-css-1.0.13.tgz#28ea38dcfd3e96796fc0c441a031d9cb5f1efb56"
 
-profilex-create-popup@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/profilex-create-popup/-/profilex-create-popup-1.0.5.tgz#3d2863ab33201351b5701752426265d084e90086"
+profilex-create-popup@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/profilex-create-popup/-/profilex-create-popup-1.0.7.tgz#e7ee08a5faf71c3caa66866ef91cd50280f6a2ba"
   dependencies:
     "@polymer/polymer" "^2.2.0"
     "@webcomponents/webcomponentsjs" "^1.0.19"
@@ -35,9 +35,9 @@ profilex-detail-view@^1.0.0:
     "@webcomponents/webcomponentsjs" "^1.0.20"
     profilex-common-css "^1.0.9"
 
-profilex-list-view@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/profilex-list-view/-/profilex-list-view-1.0.0.tgz#e9c0601452c65c8eb8ae935f0ac8e952dfdd1839"
+profilex-list-view@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/profilex-list-view/-/profilex-list-view-1.0.2.tgz#32db07beeae9d8b5a7fec177e4b9cdd5ecff0330"
   dependencies:
     "@polymer/polymer" "^2.3.0"
     "@webcomponents/webcomponentsjs" "^1.0.20"

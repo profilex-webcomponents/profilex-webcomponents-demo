@@ -12,15 +12,19 @@
     <link rel="manifest" href="/manifest.json">
     <base href="/src/">
 
-    <!--script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script!-->
+    <!--script src="/node_modules_dev/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script!-->
 
-    <link rel="import" href="../node_modules/profilex-app-router/profilex-app-location.html">
-    <link rel="import" href="../node_modules/profilex-app-router/profilex-app-route.html">
-    <link rel="import" href="../node_modules/profilex-app-router/profilex-app-load.html">
-    <link rel="import" href="../node_modules/profilex-create-popup/profilex-create-popup.html">
-    <link rel="import" href="../node_modules/profilex-detail-view/profilex-detail-view.html">
-    <link rel="import" href="../node_modules/profilex-list-view/profilex-list-view.html">
-    <link rel="stylesheet" type="text/css" href="/node_modules/profilex-common-css/css/profilex-common.css">
+    <link rel="import" href="../node_modules_dev/profilex-app-router/profilex-app-location.html">
+    <link rel="import" href="../node_modules_dev/profilex-app-router/profilex-app-route.html">
+    <link rel="import" href="../node_modules_dev/profilex-app-router/profilex-app-load.html">
+    <link rel="import" href="../node_modules_dev/profilex-create-popup/profilex-create-popup.html">
+    <link rel="import" href="../node_modules_dev/profilex-detail-view/profilex-detail-view.html">
+    <link rel="import" href="../node_modules_dev/profilex-list-view/profilex-list-view.html">
+
+    <link rel="stylesheet" type="text/css" href="/node_modules_dev/profilex-common-css/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/node_modules_dev/profilex-common-css/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/node_modules_dev/profilex-common-css/css/flexgrid.css">
+    <link rel="stylesheet" type="text/css" href="/node_modules_dev/profilex-common-css/css/formcontrols.css">
     <style>
         .left-container {
             height: 100vh;
@@ -47,79 +51,83 @@
 
 <body>
     <profilex-app-location></profilex-app-location>
-    <div class="left-container">
-        <div class="left-container-inner">
-            <h2>Users</h2>
-            <ul>
-                <li>
-                    <profilex-app-route sref="/users/create" id="create-user-link">Create User
-                    </profilex-app-route>
-                </li>
-                <li>
-                    <profilex-app-route sref="/users">List of users</profilex-app-route>
-                </li>
-                <li>
-                    <profilex-app-route sref="/users/123">User Profile</profilex-app-route>
-                </li>
-            </ul>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <img src="images/trimbleconnect_header.svg" class="brand-img" />
         </div>
-    </div>
-    <div class="right-container">
-        <div class="right-container-inner">
-            <profilex-app-load>
-                <profilex-app-container name="/users/create">
-                    <profilex-create-popup type="user" show-popup="true"></profilex-create-popup>
-                </profilex-app-container>
-                <profilex-app-container name="/users">
-                    <profilex-list-view></profilex-list-view>
-                </profilex-app-container>
-                <profilex-app-container name="/users/123">
-                    <profilex-detail-view></profilex-detail-view>
-                </profilex-app-container>
-            </profilex-app-load>
+        <div class="grid-x">
+            <div class="cell medium-4 large-2 left-panel small-2">
+                <ul class="side-nav">
+                    <li>
+                        <profilex-app-route sref="/users/create" id="create-user-link">Create User
+                        </profilex-app-route>
+                    </li>
+                    <li>
+                        <profilex-app-route sref="/users">List of users</profilex-app-route>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <profilex-app-route sref="/users/123">User Profile</profilex-app-route>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="cell medium-8 large-10 right-panel small-10">
+
+                <profilex-app-load>
+                    <profilex-app-container name="/users/create">
+                        <profilex-create-popup type="user" show-popup="true"></profilex-create-popup>
+                    </profilex-app-container>
+                    <profilex-app-container name="/users">
+                        <profilex-list-view></profilex-list-view>
+                    </profilex-app-container>
+                    <profilex-app-container name="/users/123">
+                        <profilex-detail-view></profilex-detail-view>
+                    </profilex-app-container>
+                </profilex-app-load>
+            </div>
         </div>
-    </div>
-    <script>
-        var xApiToken = "5a1e78707814ac5b3a05f49c",
-            accessToken;
-        var mockApi = "https://profilexmock-7204.restdb.io/rest/",
-            layoutSchema = {};
-        var path = "px-companies";
-        let xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = handler;
-        xhr.responseType = 'json';
-        document.addEventListener("pre-load-config", function(data) {
-            layoutSchema = data.detail.layoutSchema;
-            xhr.open('GET', mockApi + path);
+        <script>
+            var xApiToken = "5a1e78707814ac5b3a05f49c",
+                accessToken;
+            var mockApi = "https://profilexmock-7204.restdb.io/rest/",
+                layoutSchema = {};
+            var path = "px-companies";
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = handler;
+            xhr.responseType = 'json';
+            document.addEventListener("pre-load-config", function(data) {
+                layoutSchema = data.detail.layoutSchema;
+                xhr.open('GET', mockApi + path);
 
-            xhr.setRequestHeader('Accept', 'application/json');
-            if (xApiToken) {
-                xhr.setRequestHeader('x-apikey', xApiToken);
-            } else if (accessToken) {
-                xhr.setRequestHeader("Authorization", "Bearer " + accessToken)
-            }
-            xhr.send();
-        });
+                xhr.setRequestHeader('Accept', 'application/json');
+                if (xApiToken) {
+                    xhr.setRequestHeader('x-apikey', xApiToken);
+                } else if (accessToken) {
+                    xhr.setRequestHeader("Authorization", "Bearer " + accessToken)
+                }
+                xhr.send();
+            });
 
-        function handler() {
-            if (this.readyState === this.DONE) {
-                if (this.status === 200) {
-                    document.getElementsByTagName('profilex-create-popup')[0].setAttribute('is-config-ready', true);
-                    var index = layoutSchema.fields.findIndex(function(field, index) {
-                        return (field.name == 'dynamicDD');
-                    });
-                    if (index != -1) {
-                        layoutSchema.fields[index].options = this.response;
-                        document.getElementsByTagName('profilex-create-popup')[0].setAttribute('layout-schema', layoutSchema);
+            function handler() {
+                if (this.readyState === this.DONE) {
+                    if (this.status === 200) {
+                        document.getElementsByTagName('profilex-create-popup')[0].setAttribute('is-config-ready', true);
+                        var index = layoutSchema.fields.findIndex(function(field, index) {
+                            return (field.name == 'dynamicDD');
+                        });
+                        if (index != -1) {
+                            layoutSchema.fields[index].options = this.response;
+                            document.getElementsByTagName('profilex-create-popup')[0].setAttribute('layout-schema', layoutSchema);
+                        }
                     }
                 }
             }
-        }
-        var link = document.getElementById('create-user-link');
-        link.addEventListener('click', function(e) {
-            document.getElementsByTagName("profilex-create-popup")[0].setAttribute("show-popup", true);
-        });
-    </script>
+            var link = document.getElementById('create-user-link');
+            link.addEventListener('click', function(e) {
+                document.getElementsByTagName("profilex-create-popup")[0].setAttribute("show-popup", true);
+            });
+        </script>
 </body>
 
 </html>

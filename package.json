@@ -5,13 +5,17 @@
     "repository": "https://github.com/profilex-webcomponents/profilex-webcomponents-demo.git",
     "author": "<balasuresh_varadharajan@trimble.com>",
     "license": "MIT",
+    "flat": true,
     "dependencies": {
         "@polymer/polymer": "^2.3.0",
         "@webcomponents/webcomponentsjs": "^1.0.20",
-        "profilex-app-router": "^1.0.0",
-        "profilex-common-css": "^1.0.10",
+        "profilex-app-router": "^1.0.1",
+        "profilex-common-css": "^1.0.11",
         "profilex-create-popup": "^1.0.5",
         "profilex-detail-view": "^1.0.0",
         "profilex-list-view": "^1.0.0"
+    },
+    "resolutions": {
+        "profilex-common-css": "1.0.11"
     }
 }

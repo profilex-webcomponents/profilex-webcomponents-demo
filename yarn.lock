@@ -2,59 +2,21 @@
 # yarn lockfile v1
 
 
-"@polymer/app-route@^0.9.3-pre.1":
-  version "0.9.3-pre.1"
-  resolved "https://registry.yarnpkg.com/@polymer/app-route/-/app-route-0.9.3-pre.1.tgz#52893e8382a5742d4a4f2597c930eb7629cb6d44"
-  dependencies:
-    "@polymer/iron-location" gloo
-    "@polymer/polymer" gloo
-
-"@polymer/iron-location@gloo":
-  version "3.0.0-pre.1"
-  resolved "https://registry.yarnpkg.com/@polymer/iron-location/-/iron-location-3.0.0-pre.1.tgz#e2fb5f817729102fcb1838f14a67c7da57d939fe"
-  dependencies:
-    "@polymer/polymer" "^3.0.0-pre.1"
-
 "@polymer/polymer@^2.2.0", "@polymer/polymer@^2.3.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@polymer/polymer/-/polymer-2.3.0.tgz#4bf8aef3d068cf25157fbf5b31ada0f187b8a56b"
 
-"@polymer/polymer@^3.0.0-pre.1":
-  version "3.0.0-pre.1"
-  resolved "https://registry.yarnpkg.com/@polymer/polymer/-/polymer-3.0.0-pre.1.tgz#9fc26b5259aad9265f324ced02de715991d2eabe"
-  dependencies:
-    "@webcomponents/shadycss" "^1.0.0"
-    "@webcomponents/webcomponentsjs" "^1.0.0"
-
-"@polymer/polymer@gloo":
-  version "1.7.1-npm-test.4"
-  resolved "https://registry.yarnpkg.com/@polymer/polymer/-/polymer-1.7.1-npm-test.4.tgz#ef0f09795d39fd03a81e1b9ca89f8855307d9fea"
-  dependencies:
-    webcomponents.js "^0.7.20"
-
-"@webcomponents/shadycss@^1.0.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@webcomponents/shadycss/-/shadycss-1.1.0.tgz#3a31b062d6f0837b2a34bec1edea8b6fb046b2eb"
-
-"@webcomponents/webcomponentsjs@^1.0.0", "@webcomponents/webcomponentsjs@^1.0.19", "@webcomponents/webcomponentsjs@^1.0.20":
+"@webcomponents/webcomponentsjs@^1.0.19", "@webcomponents/webcomponentsjs@^1.0.20":
   version "1.0.20"
   resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-1.0.20.tgz#bac97c9709a3130241da4c2c85710e1dc8775b1c"
 
-profilex-app-router@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/profilex-app-router/-/profilex-app-router-1.0.0.tgz#4314fffd17de5173d579cd6939b07a2e05efec14"
+profilex-app-router@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/profilex-app-router/-/profilex-app-router-1.0.1.tgz#6fb4612d91fc995b6f3f884791c75d45b53871d8"
 
-profilex-common-css@^1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/profilex-common-css/-/profilex-common-css-1.0.10.tgz#2e14fd10a3b6d4b190ce0e13126bf53192827baa"
-
-profilex-common-css@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/profilex-common-css/-/profilex-common-css-1.0.7.tgz#2bedd5825c663613a97664c0c57c633af9fec2c4"
-
-profilex-common-css@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/profilex-common-css/-/profilex-common-css-1.0.9.tgz#ffe46879166c8f16892937dfa593eadf17a33f89"
+profilex-common-css@1.0.11, profilex-common-css@^1.0.10, profilex-common-css@^1.0.11, profilex-common-css@^1.0.7, profilex-common-css@^1.0.9:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/profilex-common-css/-/profilex-common-css-1.0.11.tgz#17f53ca33d2d2409eb26eb34d6438d5447e47f38"
 
 profilex-create-popup@^1.0.5:
   version "1.0.5"
@@ -84,7 +46,3 @@ profilex-list-view@^1.0.0:
 profilex-polymer-behaviors@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/profilex-polymer-behaviors/-/profilex-polymer-behaviors-1.0.1.tgz#06da4c8fefa16ba935741b93d423cbe00e8fd4c5"
-
-webcomponents.js@^0.7.20:
-  version "0.7.24"
-  resolved "https://registry.yarnpkg.com/webcomponents.js/-/webcomponents.js-0.7.24.tgz#2116fbfa1468ec416a7befdaa333e1d118f69c04"

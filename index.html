@@ -50,6 +50,52 @@
 </head>
 
 <body>
+
+    <script>
+        var xApiToken = "5a1e78707814ac5b3a05f49c",
+            accessToken;
+        var mockApi = "https://profilexmock-7204.restdb.io/rest/",
+            layoutSchema = {};
+        var path = "px-companies";
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = handler;
+        xhr.responseType = 'json';
+        window.addEventListener("pre-load-config", function(data) {
+            layoutSchema = data.detail.layoutSchema;
+            xhr.open('GET', mockApi + path);
+
+            xhr.setRequestHeader('Accept', 'application/json');
+            if (xApiToken) {
+                xhr.setRequestHeader('x-apikey', xApiToken);
+            } else if (accessToken) {
+                xhr.setRequestHeader("Authorization", "Bearer " + accessToken)
+            }
+            xhr.send();
+        });
+
+        function handler() {
+            if (this.readyState === this.DONE) {
+                if (this.status === 200) {
+                    document.getElementsByTagName('profilex-create-popup')[0].setAttribute('is-config-ready', true);
+                    var index = layoutSchema.fields.findIndex(function(field, index) {
+                        return (field.name == 'dynamicDD');
+                    });
+                    if (index != -1) {
+                        layoutSchema.fields[index].options = this.response;
+                        document.getElementsByTagName('profilex-create-popup')[0].setAttribute('layout-schema', JSON.stringify(layoutSchema));
+                    }
+                }
+            }
+        }
+
+        function wait(ms) {
+            var start = new Date().getTime();
+            var end = start;
+            while (end < start + ms) {
+                end = new Date().getTime();
+            }
+        }
+    </script>
     <profilex-app-location></profilex-app-location>
     <div class="top-bar">
         <div class="top-bar-left">
@@ -72,56 +118,20 @@
             </ul>
         </div>
         <div class="cell medium-8 large-10 right-panel small-10">
-
             <profilex-app-load>
-                <profilex-app-container name="/users/create">
+                <profilex-app-container name="/users/create" style="display:none">
                     <profilex-create-popup type="user" show-popup="true"></profilex-create-popup>
                 </profilex-app-container>
-                <profilex-app-container name="/users">
+                <profilex-app-container name="/users" style="display:none">
                     <profilex-list-view></profilex-list-view>
                 </profilex-app-container>
-                <profilex-app-container name="/users/123">
+                <profilex-app-container name="/users/123" style="display:none">
                     <profilex-detail-view></profilex-detail-view>
                 </profilex-app-container>
             </profilex-app-load>
         </div>
     </div>
     <script>
-        var xApiToken = "5a1e78707814ac5b3a05f49c",
-            accessToken;
-        var mockApi = "https://profilexmock-7204.restdb.io/rest/",
-            layoutSchema = {};
-        var path = "px-companies";
-        let xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = handler;
-        xhr.responseType = 'json';
-        document.addEventListener("pre-load-config", function(data) {
-            layoutSchema = data.detail.layoutSchema;
-            xhr.open('GET', mockApi + path);
-
-            xhr.setRequestHeader('Accept', 'application/json');
-            if (xApiToken) {
-                xhr.setRequestHeader('x-apikey', xApiToken);
-            } else if (accessToken) {
-                xhr.setRequestHeader("Authorization", "Bearer " + accessToken)
-            }
-            xhr.send();
-        });
-
-        function handler() {
-            if (this.readyState === this.DONE) {
-                if (this.status === 200) {
-                    document.getElementsByTagName('profilex-create-popup')[0].setAttribute('is-config-ready', true);
-                    var index = layoutSchema.fields.findIndex(function(field, index) {
-                        return (field.name == 'dynamicDD');
-                    });
-                    if (index != -1) {
-                        layoutSchema.fields[index].options = this.response;
-                        document.getElementsByTagName('profilex-create-popup')[0].setAttribute('layout-schema', layoutSchema);
-                    }
-                }
-            }
-        }
         var link = document.getElementById('create-user-link');
         link.addEventListener('click', function(e) {
             document.getElementsByTagName("profilex-create-popup")[0].setAttribute("show-popup", true);

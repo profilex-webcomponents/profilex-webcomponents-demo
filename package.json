@@ -11,8 +11,8 @@
         "@webcomponents/webcomponentsjs": "^1.0.20",
         "profilex-app-router": "^1.0.1",
         "profilex-common-css": "^1.0.13",
-        "profilex-create-popup": "^1.0.7",
-        "profilex-detail-view": "^1.0.0",
-        "profilex-list-view": "^1.0.2"
+        "profilex-create-popup": "^1.0.8",
+        "profilex-detail-view": "^1.0.1",
+        "profilex-list-view": "^1.0.3"
     }
 }

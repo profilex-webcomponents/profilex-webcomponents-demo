@@ -2,11 +2,11 @@
 # yarn lockfile v1
 
 
-"@polymer/polymer@^2.2.0", "@polymer/polymer@^2.3.0":
+"@polymer/polymer@^2.3.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@polymer/polymer/-/polymer-2.3.0.tgz#4bf8aef3d068cf25157fbf5b31ada0f187b8a56b"
 
-"@webcomponents/webcomponentsjs@^1.0.19", "@webcomponents/webcomponentsjs@^1.0.20":
+"@webcomponents/webcomponentsjs@^1.0.20":
   version "1.0.20"
   resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-1.0.20.tgz#bac97c9709a3130241da4c2c85710e1dc8775b1c"
 
@@ -14,34 +14,34 @@ profilex-app-router@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/profilex-app-router/-/profilex-app-router-1.0.1.tgz#6fb4612d91fc995b6f3f884791c75d45b53871d8"
 
-profilex-common-css@^1.0.10, profilex-common-css@^1.0.13, profilex-common-css@^1.0.7, profilex-common-css@^1.0.9:
+profilex-common-css@^1.0.13:
   version "1.0.13"
   resolved "https://registry.yarnpkg.com/profilex-common-css/-/profilex-common-css-1.0.13.tgz#28ea38dcfd3e96796fc0c441a031d9cb5f1efb56"
 
-profilex-create-popup@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/profilex-create-popup/-/profilex-create-popup-1.0.7.tgz#e7ee08a5faf71c3caa66866ef91cd50280f6a2ba"
+profilex-create-popup@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/profilex-create-popup/-/profilex-create-popup-1.0.8.tgz#a8e62fa18d1b3f28e0f4ce4795c7f47a92d72a18"
   dependencies:
-    "@polymer/polymer" "^2.2.0"
-    "@webcomponents/webcomponentsjs" "^1.0.19"
-    profilex-common-css "^1.0.7"
+    "@polymer/polymer" "^2.3.0"
+    "@webcomponents/webcomponentsjs" "^1.0.20"
+    profilex-common-css "^1.0.13"
     profilex-polymer-behaviors "^1.0.1"
 
-profilex-detail-view@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/profilex-detail-view/-/profilex-detail-view-1.0.0.tgz#353ef65142a4bfc0e5d1296ecd445571c2edf373"
+profilex-detail-view@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/profilex-detail-view/-/profilex-detail-view-1.0.1.tgz#5d053ec01e103e5945798856fc199999d17886ef"
   dependencies:
     "@polymer/polymer" "^2.3.0"
     "@webcomponents/webcomponentsjs" "^1.0.20"
-    profilex-common-css "^1.0.9"
+    profilex-common-css "^1.0.13"
 
-profilex-list-view@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/profilex-list-view/-/profilex-list-view-1.0.2.tgz#32db07beeae9d8b5a7fec177e4b9cdd5ecff0330"
+profilex-list-view@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/profilex-list-view/-/profilex-list-view-1.0.3.tgz#7134c8ed1586fd8843acc47251853be124dc13f3"
   dependencies:
     "@polymer/polymer" "^2.3.0"
     "@webcomponents/webcomponentsjs" "^1.0.20"
-    profilex-common-css "^1.0.10"
+    profilex-common-css "^1.0.13"
 
 profilex-polymer-behaviors@^1.0.1:
   version "1.0.1"

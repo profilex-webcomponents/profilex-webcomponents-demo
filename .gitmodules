@@ -1,0 +1,18 @@
+[submodule "node_modules_dev/profilex-app-router"]
+	path = node_modules_dev/profilex-app-router
+	url = https://github.com/profilex-webcomponents/profilex-app-router.git
+[submodule "node_modules_dev/profilex-common-css"]
+	path = node_modules_dev/profilex-common-css
+	url = https://github.com/profilex-webcomponents/profilex-common-css.git
+[submodule "node_modules_dev/profilex-create-popup"]
+	path = node_modules_dev/profilex-create-popup
+	url = https://github.com/profilex-webcomponents/profilex-create-popup.git
+[submodule "node_modules_dev/profilex-detail-view"]
+	path = node_modules_dev/profilex-detail-view
+	url = https://github.com/profilex-webcomponents/profilex-detail-view.git
+[submodule "node_modules_dev/profilex-list-view"]
+	path = node_modules_dev/profilex-list-view
+	url = https://github.com/profilex-webcomponents/profilex-list-view.git
+[submodule "node_modules_dev/profilex-polymer-behaviors"]
+	path = node_modules_dev/profilex-polymer-behaviors
+	url = https://github.com/profilex-webcomponents/profilex-polymer-behaviors.git

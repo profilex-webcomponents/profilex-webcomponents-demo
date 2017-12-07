@@ -119,14 +119,15 @@
         </div>
         <div class="cell medium-8 large-10 right-panel small-10">
             <profilex-app-load>
+
+                <profilex-app-container name="/users/:id" style="display:none">
+                    <profilex-detail-view></profilex-detail-view>
+                </profilex-app-container>
                 <profilex-app-container name="/users/create" style="display:none">
-                    <profilex-create-popup type="user" show-popup="true"></profilex-create-popup>
+                    <profilex-create-popup type="user" show-popup="true" post-url="https://profilexmock-7204.restdb.io/rest/px-users" x-apikey="5a1e78707814ac5b3a05f49c"></profilex-create-popup>
                 </profilex-app-container>
                 <profilex-app-container name="/users" style="display:none">
-                    <profilex-list-view></profilex-list-view>
-                </profilex-app-container>
-                <profilex-app-container name="/users/123" style="display:none">
-                    <profilex-detail-view></profilex-detail-view>
+                    <profilex-list-view get-url="https://profilexmock-7204.restdb.io/rest/px-users?sort=uuid&dir=-1" x-apikey="5a1e78707814ac5b3a05f49c"></profilex-list-view>
                 </profilex-app-container>
             </profilex-app-load>
         </div>

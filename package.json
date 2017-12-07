@@ -8,7 +8,9 @@
   "dependencies": {
     "@polymer/app-route": "^0.9.3-pre.1",
     "profilex-app-router": "^1.0.0",
-    "profilex-common-css": "^1.0.8",
-    "profilex-create-popup": "^1.0.5"
+    "profilex-common-css": "^1.0.10",
+    "profilex-create-popup": "^1.0.5",
+    "profilex-detail-view": "^1.0.0",
+    "profilex-list-view": "^1.0.0"
   }
 }

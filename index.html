@@ -18,6 +18,8 @@
     <link rel="import" href="../node_modules/profilex-app-router/profilex-app-route.html">
     <link rel="import" href="../node_modules/profilex-app-router/profilex-app-load.html">
     <link rel="import" href="../node_modules/profilex-create-popup/profilex-create-popup.html">
+    <link rel="import" href="../node_modules/profilex-detail-view/profilex-detail-view.html">
+    <link rel="import" href="../node_modules/profilex-list-view/profilex-list-view.html">
     <link rel="stylesheet" type="text/css" href="/node_modules/profilex-common-css/css/profilex-common.css">
     <style>
         .left-container {
@@ -66,15 +68,12 @@
         <div class="right-container-inner">
             <profilex-app-load>
                 <profilex-app-container name="/users/create">
-                    I am a create popup
                     <profilex-create-popup type="user" show-popup="true"></profilex-create-popup>
                 </profilex-app-container>
                 <profilex-app-container name="/users">
-                    I am ma list view
                     <profilex-list-view></profilex-list-view>
                 </profilex-app-container>
                 <profilex-app-container name="/users/123">
-                    I am a detail view
                     <profilex-detail-view></profilex-detail-view>
                 </profilex-app-container>
             </profilex-app-load>

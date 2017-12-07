@@ -1,0 +1,13 @@
+{
+  "name": "profilex-webcomponents-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/profilex-webcomponents/profilex-webcomponents-demo.git",
+  "author": "<balasuresh_varadharajan@trimble.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@polymer/app-route": "^0.9.3-pre.1",
+    "profilex-common-css": "^1.0.8",
+    "profilex-create-popup": "^1.0.5"
+  }
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>ProfileX - Create popup</title>
+    <meta name="description" content="root-component">
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!--script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script!-->
+
+    <link rel="import" href="/node_modules/profilex-create-popup/profilex-create-popup.html">
+    <link rel="stylesheet" type="text/css" href="/node_modules/profilex-common-css/profilex-common.css">
+</head>
+
+<body>
+
+    <profilex-create-popup type="user"></profilex-create-popup>
+    <script>
+        var xApiToken = "5a1e78707814ac5b3a05f49c",
+            accessToken;
+        var mockApi = "https://profilexmock-7204.restdb.io/rest/",
+            layoutSchema = {};
+        var path = "px-companies";
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = handler;
+        xhr.responseType = 'json';
+        document.addEventListener("pre-load-config", function(data) {
+            layoutSchema = data.detail.layoutSchema;
+            xhr.open('GET', mockApi + path);
+
+            xhr.setRequestHeader('Accept', 'application/json');
+            if (xApiToken) {
+                xhr.setRequestHeader('x-apikey', xApiToken);
+            } else if (accessToken) {
+                xhr.setRequestHeader("Authorization", "Bearer " + accessToken)
+            }
+            xhr.send();
+        });
+
+        function handler() {
+            if (this.readyState === this.DONE) {
+                if (this.status === 200) {
+                    document.getElementsByTagName('profilex-create-popup')[0].setAttribute('is-config-ready', true);
+                    var index = layoutSchema.fields.findIndex(function(field, index) {
+                        return (field.name == 'dynamicDD');
+                    });
+                    if (index != -1) {
+                        layoutSchema.fields[index].options = this.response;
+                        document.getElementsByTagName('profilex-create-popup')[0].setAttribute('layout-schema', layoutSchema);
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

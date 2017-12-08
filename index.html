@@ -12,19 +12,19 @@
     <link rel="manifest" href="/manifest.json">
     <base href="/src/">
 
-    <!--script src="/node_modules_dev/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script!-->
+    <!--script src="/components/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script!-->
 
-    <link rel="import" href="../node_modules_dev/profilex-app-router/profilex-app-location.html">
-    <link rel="import" href="../node_modules_dev/profilex-app-router/profilex-app-route.html">
-    <link rel="import" href="../node_modules_dev/profilex-app-router/profilex-app-load.html">
-    <link rel="import" href="../node_modules_dev/profilex-create-popup/profilex-create-popup.html">
-    <link rel="import" href="../node_modules_dev/profilex-detail-view/profilex-detail-view.html">
-    <link rel="import" href="../node_modules_dev/profilex-list-view/profilex-list-view.html">
+    <link rel="import" href="../components/profilex-app-router/profilex-app-location.html">
+    <link rel="import" href="../components/profilex-app-router/profilex-app-route.html">
+    <link rel="import" href="../components/profilex-app-router/profilex-app-load.html">
+    <link rel="import" href="../components/profilex-create-popup/profilex-create-popup.html">
+    <link rel="import" href="../components/profilex-detail-view/profilex-detail-view.html">
+    <link rel="import" href="../components/profilex-list-view/profilex-list-view.html">
 
-    <link rel="stylesheet" type="text/css" href="/node_modules_dev/profilex-common-css/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="/node_modules_dev/profilex-common-css/css/common.css">
-    <link rel="stylesheet" type="text/css" href="/node_modules_dev/profilex-common-css/css/flexgrid.css">
-    <link rel="stylesheet" type="text/css" href="/node_modules_dev/profilex-common-css/css/formcontrols.css">
+    <link rel="stylesheet" type="text/css" href="/components/profilex-common-css/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/components/profilex-common-css/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/components/profilex-common-css/css/flexgrid.css">
+    <link rel="stylesheet" type="text/css" href="/components/profilex-common-css/css/formcontrols.css">
     <style>
         .left-container {
             height: 100vh;
@@ -124,7 +124,7 @@
                     <profilex-detail-view></profilex-detail-view>
                 </profilex-app-container>
                 <profilex-app-container name="/users/create" style="display:none">
-                    <profilex-create-popup type="user" show-popup="true" post-url="https://profilexmock-7204.restdb.io/rest/px-users" x-apikey="5a1e78707814ac5b3a05f49c"></profilex-create-popup>
+                    <profilex-create-popup type="company" show-popup="true" post-url="https://profilexmock-7204.restdb.io/rest/px-users" x-apikey="5a1e78707814ac5b3a05f49c"></profilex-create-popup>
                 </profilex-app-container>
                 <profilex-app-container name="/users" style="display:none">
                     <profilex-list-view get-url="https://profilexmock-7204.restdb.io/rest/px-users?sort=uuid&dir=-1" x-apikey="5a1e78707814ac5b3a05f49c"></profilex-list-view>
